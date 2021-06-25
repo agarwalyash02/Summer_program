@@ -4,7 +4,9 @@ import pickle
 import struct
 
 #providing server ip and port
-clien = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+family = socket.AF_INET
+protocol = socket.SOCK_STREAM
+clien = socket.socket(family, protocol)
 clien.connect(("192.168.0.107", 7777))
 
 data = b""
